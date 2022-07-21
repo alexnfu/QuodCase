@@ -11,5 +11,6 @@
     REAL8 data_mov;
     REAL4 comando;
   END;
-	EXPORT File := DATASET('~class::tema1::base_inadimplencia_ccf.csv',Layout,CSV(heading(1)));
+	EXPORT File := DATASET('~class::lmp::base_inadimplencia',Layout,CSV(heading(1)));
+  //EXPORT IDX_File := INDEX(File,{id_consumidor},{contagem,comando,data_recebimento},'~class::lmp::index::base_atributo1');
 END;
